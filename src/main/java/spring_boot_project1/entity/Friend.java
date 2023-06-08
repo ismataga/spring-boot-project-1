@@ -1,2 +1,15 @@
-package spring_boot_project1.entity;public class Friend {
+package spring_boot_project1.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+public class Friend {
+    private Long friendId;
+    private String name;
 }
