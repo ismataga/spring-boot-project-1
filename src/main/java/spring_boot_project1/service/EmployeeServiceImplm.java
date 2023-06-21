@@ -31,12 +31,12 @@ public class EmployeeServiceImplm implements EmployeeService {
     @Override
     public EmployeeResponse getEmployeeById(Long id) {
 
-        log.info("getAllEmployee().start id", id);
+        log.info("getEmployee().start id", id);
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Employee not found by id" + id));
 
         EmployeeResponse employeeResponse = mapper.mapToEmployeeResponse(employee);
-        log.info("getAllEmployee().end id", id);
+        log.info("getEmployee().end id", id);
 
         return employeeResponse;
     }
@@ -68,7 +68,7 @@ public class EmployeeServiceImplm implements EmployeeService {
 
     @Override
     public void updateEmployeeByName(Long id, String name) {
-        log.info("updateByNameAllEmployee().start id", id);
+        log.info("updateByNam   eAllEmployee().start id", id);
         Employee requestEmployee = employeeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Employee not found by id" + id));
         requestEmployee.setName(name);
@@ -83,10 +83,7 @@ public class EmployeeServiceImplm implements EmployeeService {
         employeeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Employee not found by id" + id));
         employeeRepository.deleteById(id);
-
         log.info("deleteAllEmployee().end id", id);
-
-
     }
 
 

@@ -2,9 +2,11 @@ version: '3'
 
 services:
   db:
-    image: postgres
+    image: postgres:latest
+    restart: always
     environment:
       POSTGRES_USER: ismat
       POSTGRES_PASSWORD: secret
+      POSTGRES_DB: org.postgresql.Driver
     ports:
-      - '5432:5432'
+      - 5432:5432
