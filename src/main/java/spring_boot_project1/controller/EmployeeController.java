@@ -5,10 +5,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import spring_boot_project1.dto.EmployeeRequest;
 import spring_boot_project1.dto.EmployeeResponse;
-import spring_boot_project1.entity.Employee;
+
 import spring_boot_project1.service.EmployeeServiceImplm;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 
@@ -18,7 +18,7 @@ import java.util.List;
 public class EmployeeController {
 
     private final EmployeeServiceImplm employeeServiceImplm;
-    List<Employee> employees = new ArrayList<>();
+
 
     @PostMapping
     public void addEmployee(@RequestBody EmployeeRequest employeeRequest) {

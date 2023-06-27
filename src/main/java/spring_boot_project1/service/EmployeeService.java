@@ -7,9 +7,10 @@ import java.util.List;
 
 public interface EmployeeService {
 
+    void createEmployee(EmployeeRequest employeeRequest);
     List<EmployeeResponse> getAllEmployee();
     EmployeeResponse getEmployeeById(Long id);
-    void createEmployee(EmployeeRequest employeeRequest);
+
     void deleteEmployee(Long id);
     void updateEmployee(Long id,EmployeeRequest employeeRequest);
     void updateEmployeeByName(Long id,String name);

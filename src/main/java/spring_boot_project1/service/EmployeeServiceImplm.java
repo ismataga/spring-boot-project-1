@@ -22,10 +22,10 @@ public class EmployeeServiceImplm implements EmployeeService {
 
     @Override
     public void createEmployee(EmployeeRequest employeeRequest) {
-        log.info("createAllEmployee().start id");
+        log.info("createEmployee().start id");
         Employee employee = mapper.mapToEmployeeEntity(employeeRequest);
         employeeRepository.save(employee);
-        log.info("createAllEmployee().end id");
+        log.info("createEmployee().end id");
     }
 
     @Override
@@ -44,12 +44,12 @@ public class EmployeeServiceImplm implements EmployeeService {
     @Override
     public List<EmployeeResponse> getAllEmployee() {
 
-        log.info("getAllEmployee().start");
-        List<Employee> employees = employeeRepository.findAll();
-        List<EmployeeResponse> employeeResponses = mapper.mapToEmployeeResponseList(employees);
-        log.info("getAllEmployee().end");
+                log.info("getAllEmployee().start");
+                List<Employee> employees = employeeRepository.findAll();
+                List<EmployeeResponse> employeeResponses = mapper.mapToEmployeeResponseList(employees);
+                log.info("getAllEmployee().end");
 
-        return employeeResponses;
+                return employeeResponses;
     }
 
 
